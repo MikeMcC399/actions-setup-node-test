@@ -1,5 +1,7 @@
 # `lts/lithium` for Node.js 26 LTS is unknown
 
+Issue:  https://github.com/actions/setup-node/issues/1659
+
 **Description:**
 
 Attempting to use `lts/lithium` in `actions/setup-node` fails with:
