@@ -2,6 +2,7 @@
 
 [actions/setup-node/issues](https://github.com/actions/setup-node/issues)
 
-| Remote Issue                                               | local issue                 | Description                               | Status   |
-| ---------------------------------------------------------- | --------------------------- | ----------------------------------------- | -------- |
-| [#1659](https://github.com/actions/setup-node/issues/1659) | [issue-1659](issue-1659.md) | lts/lithium for Node.js 26 LTS is unknown | resolved |
+| Remote Issue                                               | local issue                 | Description                                     | Status   |
+| ---------------------------------------------------------- | --------------------------- | ----------------------------------------------- | -------- |
+| [#1659](https://github.com/actions/setup-node/issues/1659) | [issue-1659](issue-1659.md) | lts/lithium for Node.js 26 LTS is unknown       | resolved |
+| [#1660](https://github.com/actions/setup-node/issues/1660) | [issue-1660](issue-1660.md) | latest installs v27.0.0-alpha.0.0.0 not 26.13.0 | open     |
