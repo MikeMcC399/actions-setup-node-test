@@ -57,3 +57,28 @@ https://github.com/actions/node-versions/blob/main/versions-manifest.json should
 Attempt to resolve LTS alias from manifest...
 Error: Unable to find LTS release 'lithium' for Node version 'lts/lithium'.
 ```
+
+---
+
+## Resolution
+
+Issue https://github.com/actions/setup-node/issues/1659 is now resolved.
+
+https://github.com/actions/node-versions/blob/main/versions-manifest.json now starts with the following
+and includes the key `"lts": "Lithium"` which is necessary to recognize Node.js 26.x as an LTS release:
+
+```json
+[
+  {
+    "version": "26.13.0",
+    "stable": true,
+    "lts": "Lithium",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/26.13.0-41378513395",
+    "files": [
+      {
+        "filename": "node-26.13.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-41378513395/node-26.13.0-darwin-arm64.tar.gz"
+      },
+```
