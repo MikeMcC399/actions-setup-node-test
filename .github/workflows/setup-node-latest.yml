@@ -5,13 +5,21 @@ on:
 jobs:
   test-setup-node-latest:
     runs-on: ubuntu-26.04
-    name: Node.js latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node:
+          - current
+          - latest
+          - node
+          - '*'
+    name: Node.js ${{ matrix.node }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
-      - name: Install Node.js latest
+      - name: Install Node.js LTS
         uses: actions/setup-node@v7.1.0
         with:
-          node-version: latest
+          node-version: ${{ matrix.node }}
           check-latest: true
       - run: node --version
