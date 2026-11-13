@@ -14,13 +14,13 @@ jobs:
           - node
           - '*'
         latest:
-          - ''
+          - 'false'
           - 'true'
-    name: Node.js ${{ matrix.node }} (${{ matrix.latest }})
+    name: Node.js ${{ matrix.node }} check-latest:(${{ matrix.latest }})
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
-      - name: Install Node.js LTS
+      - name: Install Node.js ${{ matrix.node }}
         uses: actions/setup-node@v7.1.0
         with:
           node-version: ${{ matrix.node }}
